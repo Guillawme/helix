@@ -1,0 +1,313 @@
+# Default settings are indicated as comments
+# https://docs.helix-editor.com/configuration.html
+
+# Some settings taken from
+# https://theari.dev/blog/enhanced-helix-config/
+
+theme = "citylights"
+
+[editor]
+# Number of lines of padding around the edge of the screen when scrolling
+# scrolloff = 5
+
+# Enable mouse mode
+# mouse = true
+
+# Middle click paste support
+# middle-click-paste = true
+
+# Number of lines to scroll per scroll wheel step
+# scroll-lines = 3
+
+# Shell to use when running external commands
+shell = ["fish", "-c"]
+
+# Line number display: absolute simply shows each line's number, while relative
+# shows the distance from the current line. When unfocused or in insert mode,
+# relative will still show absolute line numbers
+# line-number = "absolute"
+
+# Highlight all lines with a cursor
+# cursorline = false
+
+# Highlight all columns with a cursor
+# cursorcolumn = false
+
+# Enable automatic pop up of auto-completion
+# auto-completion = true
+
+# Enable automatic formatting on save
+# auto-format = true
+
+# Enable automatic saving on the focus moving away from Helix.
+# Requires focus event support from your terminal
+auto-save = true
+
+# Time in milliseconds since last keypress before idle timers trigger.
+# idle-timeout = 250
+
+# Time in milliseconds after typing a word character before completions
+# are shown, set to 5 for instant.
+# completion-timeout = 250
+
+# Whether to apply completion item instantly when selected
+# preview-completion-insert = true
+
+# The min-length of word under cursor to trigger autocompletion
+# completion-trigger-len = 2
+
+# Set to true to make completions always replace the entire word and not just
+# the part before the cursor
+# completion-replace = false
+
+# Whether to display info boxes
+# auto-info = true
+
+# Set to true to override automatic detection of terminal truecolor support in
+# the event of a false negative
+# true-color = false
+
+# Set to true to override automatic detection of terminal undercurl support in
+# the event of a false negative
+# undercurl = false
+
+# List of column positions at which to display the rulers. Can be overridden by
+# language specific rulers in languages.toml file
+rulers = [80, 120]
+
+# Renders a line at the top of the editor displaying open buffers. Can be
+# always, never or multiple (only shown if more than one buffer is in use)
+bufferline = "multiple"
+
+# Whether to color the mode indicator with different colors depending on the
+# mode itself
+color-modes = true
+
+# Maximum line length. Used for the :reflow command and soft-wrapping if
+# soft-wrap.wrap-at-text-width is set
+# text-width = 80
+
+# Directories relative to the workspace root that are treated as LSP roots.
+# Should only be set in .helix/config.toml
+# workspace-lsp-roots = []
+
+# The line ending to use for new documents. Can be native, lf, crlf, ff, cr or
+# nel. native uses the platform's native line ending (crlf on Windows,
+# otherwise lf).
+# default-line-ending = "native"
+
+# Whether to automatically insert a trailing line-ending on write if missing
+# insert-final-newline = true
+
+# Draw border around popup, menu, all, or none
+# popup-border = "none"
+
+# How the indentation for a newly inserted line is computed: simple just
+# copies the indentation level from the previous line, tree-sitter computes the
+# indentation based on the syntax tree and hybrid combines both approaches. If
+# the chosen heuristic is not available, a different one will be used as a
+# fallback (the fallback order being hybrid -> tree-sitter -> simple).
+# indent-heuristic = "hybrid"
+
+# The characters that are used to generate two character jump labels.
+# Characters at the start of the alphabet are used first.
+# jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+# To disable auto-pairs altogether, set auto-pairs to false
+# The default pairs are (){}[]''""``, but these can be customized by setting
+# auto-pairs to a TOML table [editor.auto-pairs]
+# auto-pairs = true
+
+[editor.statusline]
+# A list of elements aligned to the left of the statusline
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator", "version-control"]
+
+# A list of elements aligned to the middle of the statusline
+center = ["position", "position-percentage", "total-line-numbers", "register"]
+
+# A list of elements aligned to the right of the statusline
+right = ["diagnostics", "selections", "file-encoding", "file-line-ending", "file-type"]
+
+# The character used to separate elements in the statusline
+# separator = "│"
+
+# The text shown in the mode element for normal, insert and select modes
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+# Enables LSP integration. Setting to false will completely disable language
+# servers regardless of language settings.
+# enable = true
+
+# Display LSP progress messages below statusline
+display-messages = true
+
+# Enable automatic popup of signature help (parameter hints)
+auto-signature-help = false
+
+# Display inlay hints
+# display-inlay-hints = false
+
+# Display docs under signature help popup
+# display-signature-help-docs = true
+
+# Enables snippet completions. Requires a server restart (:lsp-restart) to take
+# effect after :config-reload/:set.
+# snippets = true
+
+# Include declaration in the goto references popup.
+# goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+# Cursor shape in normal, insert and select modes
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+# Enables ignoring hidden files
+hidden = false
+
+# Follow symlinks instead of ignoring them
+# follow-symlinks = true
+
+# Ignore symlinks that point at files already shown in the picker
+# deduplicate-links = true
+
+# Enables reading ignore files from parent directories
+# parents = true
+
+# Enables reading .ignore files
+# ignore = true
+
+# Enables reading .gitignore files
+# git-ignore = true
+
+# Enables reading global .gitignore, whose path is specified in git's config:
+# core.excludesfile option
+# git-global = true
+
+# Enables reading .git/info/exclude files
+# git-exclude = true
+
+# Set with an integer value for maximum depth to recurse
+# max-depth = unset by default
+
+[editor.search]
+# Enable smart case regex searching (case-insensitive unless pattern contains
+# upper case characters)
+# smart-case = true
+
+# Whether the search should wrap after depleting the matches
+# wrap-around = true
+
+[editor.whitespace]
+# Options for rendering whitespace with visible characters.
+
+[editor.whitespace.render]
+# Whether to render whitespace. May either be all or none, or a table with
+# sub-keys space, nbsp, nnbsp, tab, and newline
+space = "none"
+tab = "all"
+nbsp = "all"
+nnbsp = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+# Literal characters to use when rendering whitespace. Sub-keys may be any of
+# tab, space, nbsp, nnbsp, newline or tabpad
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+# Whether to render indent guides
+render = true
+
+# Literal character to use for rendering the indent guide
+character = "┆" # Some characters that work well: "▏", "┆", "┊", "⸽", "╎"
+
+# Number of indent levels to skip
+skip-levels = 1
+
+[editor.gutters]
+# For simplicity, editor.gutters accepts an array of gutter types, which will
+# use default settings for all gutter components.
+# To customize the behavior of gutters, the [editor.gutters] section must be
+# used. This section contains top level settings, as well as settings for
+# specific gutter components as subsections.
+
+# A vector of gutters to display
+layout = ["diagnostics", "spacer", "diff", "spacer", "line-numbers", "spacer"]
+
+[editor.gutters.line-numbers]
+# Options for the line number gutter
+
+# The minimum number of characters to use
+min-width = 1
+
+# [editor.gutters.diagnostics]
+# Currently unused
+
+# [editor.gutters.diff]
+# The diff gutter option displays colored bars indicating whether a git diff
+# represents that a line was added, removed or changed. These colors are
+# controlled by the theme attributes diff.plus, diff.minus and diff.delta.
+# Other diff providers will eventually be supported by a future plugin system.
+# There are currently no options for this section.
+
+# [editor.gutters.spacer]
+# Currently unused
+
+[editor.soft-wrap]
+# Options for soft wrapping lines that exceed the view width
+
+# Whether soft wrapping is enabled.
+enable = true
+
+# Maximum free space left at the end of the line.
+# max-wrap = 20
+
+# Maximum indentation to carry over when soft wrapping a line.
+# max-indent-retain = 40
+
+# Text inserted before soft wrapped lines, highlighted with ui.virtual.wrap
+# set wrap-indicator to "" to hide it
+# wrap-indicator = "↪"
+
+# Soft wrap at text-width instead of using the full viewport size.
+# wrap-at-text-width = false
+
+[editor.smart-tab]
+# Options for navigating and editing using tab key.
+
+# If set to true, then when the cursor is in a position with non-whitespace to
+# its left, instead of inserting a tab, it will run move_parent_node_end. If
+# there is only whitespace to the left, then it inserts a tab as normal. With
+# the default bindings, to explicitly insert a tab character, press Shift-tab.
+# enable = true
+
+# Normally, when a menu is on screen, such as when auto complete is triggered,
+# the tab key is bound to cycling through the items. This means when menus are
+# on screen, one cannot use the tab key to trigger the smart-tab command. If
+# this option is set to true, the smart-tab command always takes precedence,
+# which means one cannot use the tab key to cycle through menu items. One of the
+# other bindings must be used instead, such as arrow keys or C-n/C-p.
+# supersede-menu = false
+
+[keys.normal]
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
+
+[keys.insert]
+S-tab = "move_parent_node_start"
+
+[keys.select]
+tab = "extend_parent_node_end"
+S-tab = "extend_parent_node_start"
+
