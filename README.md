@@ -12,11 +12,11 @@ not so much in practice: every doom update now required recompilation of all
 packages, which took quite some time. Then it dawned on me: Emacs is a fun hobby
 (sometimes), but I didn't need one more hobby. I needed a tool that doesn't
 distract me from the things I am actually trying to do. I remembered why I tried
-Emacs in the first place: it was when I started writing [my PhD thesis](https://
-github.com/Guillawme/these), then I chose it for its movement and text editing
-commands that could operate on words, sentences and paragraphs in addition to
-lines and characters. This was very helpful, and is still the main way I need to
-interact with text.
+Emacs in the first place: it was when I started writing [my PhD
+thesis](https://github.com/Guillawme/these), then I chose it for its movement
+and text editing commands that could operate on words, sentences and paragraphs
+in addition to lines and characters. This was very helpful, and is still the
+main way I need to interact with text.
 
 I like the idea of Emacs a lot, but in practice there are simply too many moving
 parts.
