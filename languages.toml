@@ -1,0 +1,11 @@
+[language-server]
+julia = { command = "julia", timeout = 60, args = [ "--project=@dev", "--startup-file=no", "--history-file=no", "--quiet", "-e", "using LanguageServer; runserver()" ] }
+
+[[language]]
+name = "bash"
+formatter = { command = "shfmt", timeout = 5, args = [ "--indent", "0", "--case-indent", "--space-redirects", "--keep-padding" ] }
+
+[[language]]
+name = "julia"
+formatter = { command = "julia", timeout = 60, args = [ "--project=@dev", "--startup-file=no", "--history-file=no", "--quiet", "-e", "using JuliaFormatter; print(format_text(read(stdin, String)))" ] }
+

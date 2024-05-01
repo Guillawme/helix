@@ -1,5 +1,7 @@
 # Configuration for helix
 
+## Why this?
+
 I really wanted to like Emacs. I had fun at the beginning, making [my own
 configuration](https://github.com/Guillawme/emacs.d). Later, [I tried using
 doom-emacs](https://github.com/Guillawme/doom.d) instead: it simplified a few
@@ -29,3 +31,13 @@ Finally, I found helix. It has the same `noun-verb` commands, and offers a
 balance between features out of the box and configurability that suits me
 well. A lot of useful things work right away and are on by default, it's very
 refreshing! So here we go, maybe my last text editor?
+
+## Practical details
+
+To use the language configuration for Julia, there needs to be a global
+Julia environment called `@dev` with the packages `LanguageServer` and
+`JuliaFormatter` installed.
+
+To use the formatter for shell scripts, `shfmt` needs to be installed on the
+system.
+
