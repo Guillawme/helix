@@ -2,6 +2,10 @@
 julia = { command = "julia", timeout = 60, args = [ "--project=@dev", "--startup-file=no", "--history-file=no", "--quiet", "-e", "using LanguageServer; runserver()" ] }
 
 [[language]]
+name = "awk"
+formatter = { command = "awk", timeout = 5, args = [ "--file=/dev/stdin", "--pretty-print=/dev/stdout" ] }
+
+[[language]]
 name = "bash"
 formatter = { command = "shfmt", timeout = 5, args = [ "--indent", "0", "--case-indent", "--space-redirects", "--keep-padding" ] }
 
